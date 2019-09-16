@@ -11,12 +11,16 @@ namespace DotNetTraining
     public class BaseTest
     {
         public IWebDriver Driver { get; private set; }
+        public HomePage HomePage { get; set; }
 
         [TestInitialize]
         public void Setup()
         {
             var factory = new WebDriverFactory();
             Driver = factory.Create(BrowserType.Chrome);
+
+            HomePage = new HomePage(Driver);
+
         }
 
         [TestCleanup]

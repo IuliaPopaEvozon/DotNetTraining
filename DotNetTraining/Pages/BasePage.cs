@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DotNetTraining
 {
-    class BasePage
+    public class BasePage
     {
         public IWebDriver Driver { get; set; }
 
